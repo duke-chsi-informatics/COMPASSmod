@@ -57,7 +57,9 @@ Suggests:
     devtools,
     flowWorkspaceData,
     ggplot2,
-    progress 
+    progress,
+    markdown,
+    magick
 LazyLoad: yes
 LazyData: yes
 biocViews: ImmunoOncology, FlowCytometry
