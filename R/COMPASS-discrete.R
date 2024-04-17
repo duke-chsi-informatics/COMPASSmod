@@ -20,11 +20,11 @@
   #Iniitalize every subset and subject as a responder
   if (!init_with_fisher) {
     indi = array(1, dim = c(I, K)) # 0 indicate that gamma_ik=0
-    for (k in 1:K1) {
-      #non-responders when p_u >= p_s
-      l2 = which((n_s[, k] / N_s) - (n_u[, k] / N_u) <= 0)
-      indi[l2, k] <- 0;
-    }
+  #  for (k in 1:K1) {
+  #    #non-responders when p_u >= p_s
+  #    l2 = which((n_s[, k] / N_s) - (n_u[, k] / N_u) <= 0)
+  #    indi[l2, k] <- 0;
+  #  }
   }
   #alternately initialize indicators from Fisher's test.
   if (init_with_fisher) {
