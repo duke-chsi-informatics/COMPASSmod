@@ -6,6 +6,7 @@
 ##' The posterior items retrieved are described as follows::
 ##'
 ##' \describe{
+##' \item{\code{compute_posterior}:}{Compute the posterior predicted values for Pu and Ps.}
 ##' \item{\code{PosteriorPs}:}{The posterior estimate of the proportion of cells in the stimulated sample.}
 ##' \item{\code{PosteriorPu:}}{The posterior estimate of the proportio of cells in the unstimulated sample.}
 ##' \item{\code{PosteriorDiff}:}{The difference in posterior proportions,
@@ -18,6 +19,7 @@
 ##' @export
 ##' @examples
 ##' Posterior(CR)
+##' compute_posterior(CR)
 ##' PosteriorPs(CR)
 ##' PosteriorPu(CR)
 ##' PosteriorDiff(CR)
