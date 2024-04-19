@@ -261,6 +261,7 @@
     mean_gamma = Mgamma,
     A_gamma = rowMeans(A_gm),
     categories = categories,
+    indi = indi,            #Initialized gamma
     model = "discrete"
   )
 
