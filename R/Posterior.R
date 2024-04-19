@@ -34,7 +34,7 @@ Posterior <- function(x) {
 
 ##' @rdname Posterior
 ##' @export
-compute_posterior <- function(x, as.matrix=FALSE) {
+compute_posterior <- function(x) {
 
   output <- lapply( 1:nrow(x$data$n_s), function(i) {
     .Call( C_samplePuPs,
