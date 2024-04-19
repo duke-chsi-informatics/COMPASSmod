@@ -37,6 +37,10 @@ jobs:
             any::markdown
             any::magick
           needs: check
+      
+      - name: Re-build docs
+        run: |
+          Rscript -e "devtools::document()"
 
       - uses: r-lib/actions/check-r-package@v2
         with:
