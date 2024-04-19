@@ -30,6 +30,8 @@ Posterior <- function(x) {
   return(x$fit$posterior)
 }
 
+##' @rdname Posterior
+##' @export
 compute_posterior <- function(x, as.matrix=FALSE) {
 
   output <- lapply( 1:nrow(x$data$n_s), function(i) {
