@@ -4,8 +4,8 @@
 using namespace Rcpp;
 
 // [[register]]
-RcppExport SEXP samplePuPs(SEXP alphau, SEXP alphas, SEXP gammat, SEXP T,
-                           SEXP K, SEXP nsi, SEXP nui, SEXP d, SEXP M) {
+RcppExport SEXP samplePuPs_full(SEXP alphau, SEXP alphas, SEXP gammat, SEXP T,
+                                SEXP K, SEXP nsi, SEXP nui, SEXP d, SEXP M) {
   BEGIN_RCPP
 
   IntegerVector xnsi(nsi);        //  n_s[i,]
