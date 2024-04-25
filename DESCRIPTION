@@ -64,4 +64,4 @@ LazyLoad: yes
 LazyData: yes
 biocViews: ImmunoOncology, FlowCytometry
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.1

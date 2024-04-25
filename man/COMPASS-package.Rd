@@ -17,3 +17,18 @@ between samples of cells subjected to different stimulations.
   \item \code{\link{COMPASS}}, for the main model fitting routine.
   }
 }
+\author{
+\strong{Maintainer}: Greg Finak \email{gfinak@fhcrc.org}
+
+Authors:
+\itemize{
+  \item Lynn Lin \email{llin@fhcrc.org}
+  \item Kevin Ushey \email{kushey@fhcrc.org}
+}
+
+Other contributors:
+\itemize{
+  \item Raivo Kolde \email{rkolde@gmail.com} (Author of 'pheatmap', which was modified and now used internally in COMPASS) [contributor]
+}
+
+}

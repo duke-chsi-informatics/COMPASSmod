@@ -2,6 +2,8 @@
 % Please edit documentation in R/Posterior.R
 \name{Posterior}
 \alias{Posterior}
+\alias{compute_posterior}
+\alias{compute_posterior_full}
 \alias{PosteriorDiff}
 \alias{PosteriorLogDiff}
 \alias{PosteriorPs}
@@ -9,6 +11,10 @@
 \title{Retrieve Posterior Measures from a COMPASS fit}
 \usage{
 Posterior(x)
+
+compute_posterior(x)
+
+compute_posterior_full(x)
 
 PosteriorDiff(x)
 
@@ -29,6 +35,8 @@ from a \code{COMPASS} fit object.
 The posterior items retrieved are described as follows::
 
 \describe{
+\item{\code{compute_posterior}:}{Compute the posterior predicted mean values for Pu and Ps.}
+\item{\code{compute_posterior_full}:}{Compute the full posterior predicted values for Pu and Ps.}
 \item{\code{PosteriorPs}:}{The posterior estimate of the proportion of cells in the stimulated sample.}
 \item{\code{PosteriorPu:}}{The posterior estimate of the proportio of cells in the unstimulated sample.}
 \item{\code{PosteriorDiff}:}{The difference in posterior proportions,
@@ -39,6 +47,8 @@ as described above.}
 }
 \examples{
 Posterior(CR)
+compute_posterior(CR)
+compute_posterior_full(CR)
 PosteriorPs(CR)
 PosteriorPu(CR)
 PosteriorDiff(CR)
