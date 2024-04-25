@@ -6,7 +6,8 @@
 ##' The posterior items retrieved are described as follows::
 ##'
 ##' \describe{
-##' \item{\code{compute_posterior}:}{Compute the posterior predicted values for Pu and Ps.}
+##' \item{\code{compute_posterior}:}{Compute the posterior predicted mean values for Pu and Ps.}
+##' \item{\code{compute_posterior_full}:}{Compute the full posterior predicted values for Pu and Ps.}
 ##' \item{\code{PosteriorPs}:}{The posterior estimate of the proportion of cells in the stimulated sample.}
 ##' \item{\code{PosteriorPu:}}{The posterior estimate of the proportio of cells in the unstimulated sample.}
 ##' \item{\code{PosteriorDiff}:}{The difference in posterior proportions,
@@ -20,6 +21,7 @@
 ##' @examples
 ##' Posterior(CR)
 ##' compute_posterior(CR)
+##' compute_posterior_full(CR)
 ##' PosteriorPs(CR)
 ##' PosteriorPu(CR)
 ##' PosteriorDiff(CR)
@@ -47,6 +49,29 @@ compute_posterior <- function(x) {
       x$data$n_u[i, ],
       x$fit$categories,
       ncol(x$fit$categories) - 1L
+    )
+  })
+
+  names(output) <- rownames(x$data$n_s)
+  return(output)
+}
+
+
+##' @rdname Posterior
+##' @export
+compute_posterior_full <- function(x) {
+
+  output <- lapply( 1:nrow(x$data$n_s), function(i) {
+    .Call( C_samplePuPs_full,
+           x$fit$alpha_u,
+           x$fit$alpha_s,
+           x$fit$gamma[i, , ],
+           dim(x$fit$gamma)[[3]],
+           dim(x$fit$gamma)[[2]],
+           x$data$n_s[i, ],
+           x$data$n_u[i, ],
+           x$fit$categories,
+           ncol(x$fit$categories) - 1L
     )
   })
 

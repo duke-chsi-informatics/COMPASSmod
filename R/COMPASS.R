@@ -467,7 +467,7 @@ COMPASS <- function(data, treatment, control, subset=NULL,
 if(run_model_or_return_data == "run_model"){
   ## Compute the posterior ps-pu; log(ps)-log(pu)
   vmessage("Computing the posterior difference in proportions, posterior log ratio...")
-  output$fit$posterior <- compute_posterior(output)
+  output$fit$posterior <- compute_posterior_full(output)
   vmessage("Done!")
 }
 
